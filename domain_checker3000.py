@@ -1,5 +1,6 @@
 import requests
 import csv
+import screenshots
 
 
 class fileReader:
@@ -25,9 +26,10 @@ class domainChecker:
         except requests.RequestException:
             return False
 
-    def check_domains(self):
+    def check_domains(self, screenshot_taker):
         unreachable_domains = []
         counter = 1
+        screenshot_taker.take_screenshots(self.data)
         for domain in self.data:
             counter += 1
             # Check if the domain is reachable
