@@ -27,7 +27,10 @@ class domainChecker:
 
     def check_domains(self):
         unreachable_domains = []
+        counter = 1
         for domain in self.data:
+            counter += 1
+            # Check if the domain is reachable
             if not self.is_domain_reachable(domain):
-                unreachable_domains.append(domain)
+                unreachable_domains.append([domain,counter])
         return unreachable_domains

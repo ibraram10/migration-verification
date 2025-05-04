@@ -23,7 +23,7 @@ if __name__ == "__main__":
     unreachable_domains = checker.check_domains()
 
     # Print the unreachable domains
-    print("Unreachable Domains:")
+    print("Row \t\t"+"Unreachable Domains:")
     for domain in unreachable_domains:
-        print(domain)
+        print(domain[1]+from_row, "\t\t", domain[0])
     print ("number of unreachable domains: ", len(unreachable_domains))
