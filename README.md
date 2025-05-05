@@ -3,9 +3,11 @@
   the websites that didn't return HTTP status 200</p>
   <h1>How it works? </h1>
   <p>You just provide the csv file, the rows you want to check, and it returns a list of the domains that didn't return HTTP status 200</p>
+  <p>and if you are feeling a bit paranoid, it will take screenshots of all the <b>Working</b> websites it visits!
 
 <h1>Usage</h1>
 
 ```console
 foo@ls:~$  python main.py <file_path> <from_row#> <to_row#>
 ```
+
